@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Faculty Profile - Rohit Verma</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        transition: background 0.3s, color 0.3s;
+    }
+    :root {
+        --bg: #ffffff;
+        --text: #222222;
+        --accent: #0055aa;
+    }
+    body.dark {
+        --bg: #1e1e1e;
+        --text: #e5e5e5;
+        --accent: #4ea3ff;
+    }
+    .container {
+        display: flex;
+    }
+    .sidebar {
+        width: 240px;
+        background: var(--accent);
+        color: #fff;
+        height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+        position: fixed;
+    }
+    .sidebar h2 {
+        margin-top: 0;
+    }
+    .sidebar a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+    .content {
+        margin-left: 260px;
+        padding: 30px;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        transition: opacity 0.4s ease;
+    }
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn 0.7s forwards;
+    }
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+    .profile-img {
+        width: 160px;
+        height: 160px;
+        background: #ccc;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        object-fit: cover;
+    }
+    .dark-toggle {
+        background: #fff;
+        color: black;
+        padding: 6px 12px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .icons a {
+        margin-right: 15px;
+        font-size: 22px;
+        text-decoration: none;
+        color: var(--text);
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <h2>Rohit Verma</h2>
+        <img src="profile.jpg" class="profile-img" alt="Profile Photo" />
+        <a href="#home">Home</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#cv">CV</a>
+        <button class="dark-toggle" onclick="toggleDark()">Dark Mode</button>
+    </div>
+
+    <div class="content fade-in">
+
+        <section id="home">
+            <h1>About Me</h1>
+            <p>Faculty Member in Applied Mathematics. My work focuses on computational methods, fractional PDEs, numerical modeling, and meshfree approaches.</p>
+
+            <div class="icons">
+                <a href="#" title="Google Scholar">📘</a>
+                <a href="#" title="ORCID">🟢</a>
+                <a href="#" title="LinkedIn">🔗</a>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research Profile</h2>
+            <p>My research interests include computational mathematics, fractional calculus, RBF methods, bioheat transfer modeling, and numerical schemes for complex PDEs.</p>
+        </section>
+
+        <section id="publications">
+            <h2>Research Articles</h2>
+            <ul>
+                <li>Research Article 1 – Fractional Heat Equation Modeling</li>
+                <li>Research Article 2 – Meshfree RBF Simulation Techniques</li>
+                <li>Research Article 3 – Bioheat Transfer Modeling in Layered Tissue</li>
+            </ul>
+        </section>
+
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <p>Experience in teaching undergraduate and postgraduate mathematics courses, including calculus, numerical methods, and PDEs.</p>
+        </section>
+
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <p><a href="cv.pdf" download>Download CV</a></p>
+        </section>
+
+    </div>
+</div>
+
+<script>
+function toggleDark(){
+    document.body.classList.toggle('dark');
+}
+</script>
+
+</body>
+</html>
